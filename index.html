@@ -4,29 +4,285 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>OVR Calculator</title>
 </head>
 <body>
-    <h1>OVR Calculator</h1>
-    <form action="">
-    <label for="pac">PAC</label>
-        <input type="number" min="1" max="99" name="pac" id="pac-input"><br>
-    <label for="sho">SHO</label>
-        <input type="number" min="1" max="99" name="sho" id="sho-input"><br>
-    <label for="pas">PAS</label>
-        <input type="number" min="1" max="99" name="pas" id="pas-input"><br>
-    <label for="dri">DRI</label>
-        <input type="number" min="1" max="99" name="dri" id="dri-input"><br>
-    <label for="def">DEF</label>
-        <input type="number" min="1" max="99" name="def" id="def-input"><br>
-    <label for="phy">PHY</label>
-        <input type="number" min="1" max="99" name="phy" id="phy-input"><br>
-        <input type="submit">
+    <div id="h1"><h1>OVR Calculator</h1></div>
+    <div class="container">
+        <h2>Overall:</h2>
+    </div>
+    <div id="wrapper">
+    <form action="javascript:void(0);">
+    <div id="box">
+        <div>
+            <label for="pac">pace</label>
+        </div>
+        <div class="number-input">
+            <input 
+            type="number" 
+            id="pac" 
+            name="pac" 
+            class="number-input-text-box"  
+            min="0" 
+            max="99" 
+            required>
+        </div>
+        <div>
+            <label for="sho">shot</label>
+        </div>
+        <div class="number-input">
+            <input 
+            type="number" 
+            id="sho" 
+            name="sho" 
+            class="number-input-text-box"  
+            min="0" 
+            max="99" 
+            required>
+        </div>
+        <div>
+            <label for="pas">passing</label>
+        </div>
+        <div class="number-input">
+            <input 
+            type="number" 
+            id="pas" 
+            name="pas" 
+            class="number-input-text-box"  
+            min="0" 
+            max="99" 
+            required>
+        </div>
+        <div>
+            <label for="dri">dribbling</label>
+        </div>
+        <div class="number-input">
+            <input 
+            type="number" 
+            id="dri" 
+            name="dri" 
+            class="number-input-text-box"  
+            min="0" 
+            max="99" 
+            required>
+        </div>
+        <div>
+            <label for="def">defending</label>
+        </div>
+        <div class="number-input">
+            <input 
+            type="number" 
+            id="def" 
+            name="def" 
+            class="number-input-text-box"  
+            min="0" 
+            max="99" 
+            required>
+        </div>
+        <div>
+            <label for="phy">physicality</label>
+        </div>
+        <div class="number-input">
+            <input 
+            type="number" 
+            id="phy" 
+            name="phy" 
+            class="number-input-text-box"  
+            min="0" 
+            max="99" 
+            required>
+        </div>
+    </div>
+        <div>
+            <button class="submit-buttonn" type="submit">CALCULATE</button>
+        </div>
     </form>
+</div>
 
-    <span id="container">
 
-    </span>
+    
+
+
+    <!-- <div id="wrapper">
+        <form action="javascript:void(0);">
+            <div>
+                <div>
+                    <label for="pac">Pace</label>
+                </div>
+                <div class="number-input-container">
+                    <button
+                        type="button"
+                        class="button-decrement"
+                        onclick="setNumber(event)"
+                        data-input-id="pac"
+                        data-operation="decrement"
+                    ></button>
+                    <div class="number-input">
+                        <input
+                            type="number"
+                            id="pac"
+                            name="pac"
+                            class="number-input-text-box"
+                            value="85"
+                            min="0"
+                            max="99"
+                            oninput="handleNumberInput()"
+                            onblur="handleNumberInputBlur(event)"
+                        />
+                    </div>
+                    <button
+                        type="button"
+                        class="button-increment"
+                        onclick="setNumber(event)"
+                        data-input-id="pac"
+                        data-operation="increment"
+                    ></button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="sho">Shot</label>
+                </div>
+                <div class="number-input-container">
+                    <button
+                        type="button"
+                        class="button-decrement"
+                        onclick="setNumber(event)"
+                        data-input-id="sho"
+                        data-operation="decrement"
+                    ></button>
+                    <div class="number-input">
+                        <input
+                            type="number"
+                            id="sho"
+                            name="sho"
+                            class="number-input-text-box"
+                            value="85"
+                            min="0"
+                            max="99"
+                            oninput="handleNumberInput()"
+                            onblur="handleNumberInputBlur(event)"
+                        />
+                    </div>
+                    <button
+                        type="button"
+                        class="button-increment"
+                        onclick="setNumber(event)"
+                        data-input-id="sho"
+                        data-operation="increment"
+                    ></button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="pas">Passing</label>
+                </div>
+                <div class="number-input-container">
+                    <button
+                        type="button"
+                        class="button-decrement"
+                        onclick="setNumber(event)"
+                        data-input-id="pas"
+                        data-operation="decrement"
+                    ></button>
+                    <div class="number-input">
+                        <input
+                            type="number"
+                            id="pas"
+                            name="pas"
+                            class="number-input-text-box"
+                            value="85"
+                            min="0"
+                            max="99"
+                            oninput="handleNumberInput()"
+                            onblur="handleNumberInputBlur(event)"
+                        />
+                    </div>
+                    <button
+                        type="button"
+                        class="button-increment"
+                        onclick="setNumber(event)"
+                        data-input-id="pas"
+                        data-operation="increment"
+                    ></button>
+                </div>
+                <input
+                    type="submit"
+                    style="display: none;"
+                    onclick="if (document.activeElement) document.activeElement.blur()"
+                />
+            </div>
+            <div>
+                <div>
+                    <label for="dri">DRI</label>
+                </div>
+                <div class="number-input-container">
+                    <button
+                        type="button"
+                        class="button-decrement"
+                        onclick="setNumber(event)"
+                        data-input-id="dri"
+                        data-operation="decrement"
+                    ></button>
+                    <div class="number-input">
+                        <input
+                            type="number"
+                            id="dri"
+                            name="dri"
+                            class="number-input-text-box"
+                            value="85"
+                            min="0"
+                            max="99"
+                            oninput="handleNumberInput()"
+                            onblur="handleNumberInputBlur(event)"
+                        />
+                    </div>
+                    <button
+                        type="button"
+                        class="button-increment"
+                        onclick="setNumber(event)"
+                        data-input-id="dri"
+                        data-operation="increment"
+                    ></button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="def">Defending</label>
+                </div>
+                <div class="number-input-container">
+                    <button
+                        type="button"
+                        class="button-decrement"
+                        onclick="setNumber(event)"
+                        data-input-id="def"
+                        data-operation="decrement"
+                    ></button>
+                    <div class="number-input">
+                        <input
+                            type="number"
+                            id="def"
+                            name="def"
+                            class="number-input-text-box"
+                            value="85"
+                            min="0"
+                            max="99"
+                            oninput="handleNumberInput()"
+                            onblur="handleNumberInputBlur(event)"
+                        />
+                    </div>
+                    <button
+                        type="button"
+                        class="button-increment"
+                        onclick="setNumber(event)"
+                        data-input-id="def"
+                        data-operation="increment"
+                    ></button>
+                </div>
+            </div>
+        </form>
+    </div> -->
     
 
 <script src="app.js"></script>
