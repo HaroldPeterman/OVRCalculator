@@ -4,7 +4,7 @@ const pasInput = document.getElementById('pas');
 const driInput = document.getElementById('dri');
 const defInput = document.getElementById('def');
 const phyInput = document.getElementById('phy');
-const container = document.getElementById('container');
+const overall = document.getElementById('overall');
 
 function clearInput(){
     var getValue = document.getElementById("pac");
@@ -48,8 +48,8 @@ addEventListener('submit', function(e){
     const def = defInput.valueAsNumber;
     const phy = phyInput.valueAsNumber;
     let ovr = calculator(pac,sho,pas,dri,def,phy);
-    container.replaceChildren('Overall: ',ovr);
-    // clearInput();
+    overall.replaceChildren(ovr,' OVR');
+    clearInput();
 })
 
 function calculator(pac,sho,pas,dri,def,phy) {
