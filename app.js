@@ -54,7 +54,7 @@ addEventListener('submit', function(e){
 
 function calculator(pac,sho,pas,dri,def,phy) {
     let number = pac + sho + pas + dri + def + phy;
-    let finalNumber = number / 5.15
+    let finalNumber = number / 5.17
     return Math.floor(finalNumber);
 }
 
